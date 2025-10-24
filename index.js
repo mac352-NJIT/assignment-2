@@ -1,35 +1,42 @@
-function reverseString(str) {
+function reverseString() {
+    const str = document.getElementById("inputBox").value;
     let reversestr = '';
     for (let i = str.length - 1; i >= 0; i--) {
         reversestr += str[i];
     }
-    return reversestr;
+    document.getElementById("outputBox").value = reversestr;
 }
 
-function isPalindrome(numbers) {
-// let val = numbers/100;
-// let rem = numbers%10;
-// if (val == rem) {
-// return numbers + " is a palindrome";
-// } else {
-// return numbers + " is not a palindrome";
-// }
+function isPalindrome() {
 
-let strNum = numbers.ToString();
-for (let i = 0; i < strNum.length() - 1; i++) {
-    if (strNum[i] == strNum[-i]) {
-        return strNum + " is a palindrome";
+const strNum = document.getElementById("palindromeInput").value;
+const convertintoString = strNum.toString();
+let isPalindrome = true;
+
+for (let i = 0; i < convertintoString.length; i++) {
+    if (convertintoString[i] != convertintoString[convertintoString.length - 1 -i]) {
+        isPalindrome = false;
+    }
+}
+
+    if (isPalindrome) {
+        document.getElementById("palindromeOutput").value = convertintoString + " is a palindrome";
     }
     else {
-    return strNum + " is not a palindrome";
+        document.getElementById("palindromeOutput").value = convertintoString + " is not a palindrome";
     }
 
 }
-}
 
-function billCalculator(total, tipPercentage) {
+
+function billCalculator() {
+
+const total = parseFloat(document.getElementById("inputBox").value);
+const tipPercentage = parseFloat(document.getElementById("tipBox").value);
 
 let tipAmount = (tipPercentage / 100) * total;
-return (total + tipAmount).ToString();
+let totalBillAmount = total + tipAmount;
+
+document.getElementById("outputBox").value = (totalBillAmount).toString();
 
 }

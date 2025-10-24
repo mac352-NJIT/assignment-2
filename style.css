@@ -1,0 +1,66 @@
+ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: #555555;
+  color: white;
+}
+
+#mainheader {
+    padding-left: 20px;
+}
+
+#mainpage {
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    margin: 0;
+}
+#reversepage {
+    background-color: lightcyan;
+    margin: 0;
+}
+
+#reverseTextBox {
+    text-align: center;
+}
+
+#palindromepage {
+    background-color: lightgreen;
+    margin: 0;
+}
+
+#palindromeTextBox {
+    text-align: center;
+}
+
+#billCalculatorpage {
+    background-color: lightcoral;
+    margin: 0;
+}
+
+#billCalculatorTextBox {
+    text-align: center;
+}
+#billCalculatorEquationBox {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.nomargin {
+    font-style: bold;
+    margin: 0;
+}
